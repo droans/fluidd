@@ -5,7 +5,7 @@ import { RootState } from '../types'
 export const getters: GetterTree<MacrosState, RootState> = {
 
   /**
-   * Returns all available macros, transformed.
+   * Returns all available macros including extended macros, transformed.
    * Should include the macro's config.
    */
   getMacros: (state, getters, rootState) => {
