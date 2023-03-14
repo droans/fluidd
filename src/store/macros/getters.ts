@@ -10,7 +10,7 @@ export const getters: GetterTree<MacrosState, RootState> = {
    */
   getMacros: (state, getters, rootState) => {
     const macros = Object.keys(rootState.printer.printer)
-      .filter(key => /^gcode_macro (?!_)/.test(key))
+      .filter(key => /^(gcode|extended)_macro (?!_)/.test(key))
       .map(key => {
         const lowerCaseKey = key.toLocaleLowerCase()
         const name = lowerCaseKey.split(' ')[1]
